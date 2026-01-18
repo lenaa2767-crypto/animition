@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.all {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('stars.png');
+    background-color: black;
+    animation: starBackground 30s linear infinite;
+}
+
+@keyframes starBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+.sun {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: -2px 2px 50px 16px #FFFF33;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.oo {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: earthOrbit 20s linear infinite;
+}
+.earth {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 100%;
+   transform: translate(-50%, -50%);
+    animation: earthOrbit 10s linear infinite;
+}
+
+@keyframes earthOrbit {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.moon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #aaa;
+    border-radius: 50%;
+    top: -120%; 
+    left: 50%;
+    transform-origin: 0 0; 
+    animation: moonOrbit 2s linear infinite;
+}
